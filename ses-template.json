@@ -1,0 +1,8 @@
+{
+  "Template": {
+    "TemplateName": "Bounce",
+    "SubjectPart": "Email sending failed : Unknown user.",
+    "HtmlPart": "<h3>Email sending failed : Unknown user.</h3><p>You attempted to send an email to an unknown user. Please check your email address and try to send it again.</p><br><p>Unknown users : {{unknown_users}}</p><br><hr><br><p>From: {{original_email_from}}<br>Sent: {{original_email_datetime}}<br>{{original_email_recipients_html}}<br>Subject: {{original_email_subject}}</p><br>{{original_email_contents_html}}",
+    "TextPart": "Email sending failed : Unknown user.\n\nYou attempted to send an email to an unknown user. Please check your email address and try to send it again.\n\nUnknown users : {{unknown_users}}\n\n\nFrom: {{original_email_from}}\nSent: {{original_email_datetime}}\n{{original_email_recipients_text}}\nSubject: {{original_email_subject}}\n{{original_email_contents_text}}"
+  }
+}

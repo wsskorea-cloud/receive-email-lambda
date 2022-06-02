@@ -1,3 +1,13 @@
+# Receive Email Lambda Function
+
+## Create SES Template
+
+```shell
+aws ses create-template --region us-east-1 --cli-input-json file://ses-template.json
+```
+
+## License
+
 MIT License
 
 Copyright (c) 2022-2022 WorldSkills Korea Cloud Computing

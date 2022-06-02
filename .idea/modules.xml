@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../openldap/.idea/openldap.iml" filepath="$PROJECT_DIR$/../openldap/.idea/openldap.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/receive-email-lambda.iml" filepath="$PROJECT_DIR$/.idea/receive-email-lambda.iml" />
     </modules>
   </component>
