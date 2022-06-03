@@ -140,7 +140,7 @@ class CreateBounceMail:
     def createOriginalEmailRecipientsHtml(self):
         toList, ccList, bccList = self.createRecipientsList()
 
-        return 'To: {}<br>Cc:{}<br>Bcc:{}'.format(', '.join(toList), ', '.join(ccList), ', '.join(bccList))
+        return 'To: {}<br>Cc: {}<br>Bcc: {}'.format(', '.join(toList), ', '.join(ccList), ', '.join(bccList))
 
     def createOriginalEmailRecipientsText(self):
         toList, ccList, bccList = self.createRecipientsList()
@@ -229,22 +229,24 @@ def lambda_handler(event, context):
 
     sendEmail(recipients, emailFile)
 
-    SLACK_URL = 'https://hooks.slack.com/services/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'
-    payload = {
-        # 'text': json.dumps({
-        # 'bucket_name': bucketName,
-        # 'object_key': objectKey,
-        # 'email_file': emailFile
-        # })
-        'text': json.dumps(json.loads(event))
-    }
+    # SLACK_URL = 'https://hooks.slack.com/services/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'
+    # payload = {
+    #     # 'text': json.dumps({
+    #     # 'bucket_name': bucketName,
+    #     # 'object_key': objectKey,
+    #     # 'email_file': emailFile
+    #     # })
+    #     'text': json.dumps(event)
+    # }
 
-    response = requests.post(
-        SLACK_URL,
-        json=payload
-    )
+    # response = requests.post(
+    #     SLACK_URL,
+    #     json=payload
+    # )
 
     return {
-        'statusCode': response.status_code,
-        'body': response.text
+        # 'statusCode': response.status_code,
+        # 'body': response.text
+        'statusCode': 200,
+        'body': json.dumps({'result': 'OK'})
     }
